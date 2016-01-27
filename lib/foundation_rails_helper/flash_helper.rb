@@ -31,7 +31,7 @@ module FoundationRailsHelper
   private
 
     def alert_box(value, alert_class)
-      content_tag :div, :class => "callout #{alert_class}", 'data-closable': '' do
+      content_tag :div, :class => "callout #{alert_class}", data: { closable: '', animate: 'slide-in-down slide-out-up' } do
         concat value
         if FoundationRailsHelper.configuration.show_close_button
           concat close_link
