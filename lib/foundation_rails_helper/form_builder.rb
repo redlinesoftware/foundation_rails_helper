@@ -24,7 +24,7 @@ module FoundationRailsHelper
         options[:class] += ' is-invalid-label'
       end
 
-      super(attribute, (text || '').html_safe, options)
+      super(attribute, text, options)
     end
 
     # rubocop:disable LineLength
